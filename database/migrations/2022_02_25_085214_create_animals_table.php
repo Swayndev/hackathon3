@@ -36,7 +36,7 @@ return new class extends Migration
             $table->text('address')->nullable();
             $table->timestamps();
         });
-        
+
         Schema::create('images', function (Blueprint $table) {
             $table->id();
             $table->string('path')->nullable();
