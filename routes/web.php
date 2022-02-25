@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/', 'MovieController@index');
+Route::get('/', 'OwnerController@index');
