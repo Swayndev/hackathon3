@@ -13,9 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
-Route::get('/', 'MovieController@index');
+Route::get('/', 'OwnerController@index');
+
+// Route::get('/index', 'AnimalController@index');
+
+
+// Route::get('/movies/create', 'MovieController@create');   // Route for create method
+
+// Route::get('/movies/{id?}', 'MovieController@show');     // Route for  show method
+
+// Route::post('/movies/store', 'MovieController@store');   // Route for store method
+
+// Route::delete(
+//     '/movies/{id}',
+//     'MovieController@delete'
+// );
