@@ -26,7 +26,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('owner', function (Blueprint $table) {
+        Schema::create('owners', function (Blueprint $table) {
             $table->id();  // `id`, PRIMARY KEY, AUTO_INCREMENT, UNSIGNED BIGINT(20)
             // $table->unsignedBigInteger('movie_id');
             $table->string('first_name')->nullable(); //
@@ -52,7 +52,7 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('animals');
-        Schema::dropIfExists('owner');
+        Schema::dropIfExists('owners');
         Schema::dropIfExists('images');
     }
 };
