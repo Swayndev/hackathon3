@@ -7,13 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Animal;
 
-class Owners extends Model
+class Owner extends Model
 {
     use HasFactory;
 
-    public function hasAnimal()
+    public function animals()
     {
         return $this->hasMany(Animal::class);
     }
-
 }
