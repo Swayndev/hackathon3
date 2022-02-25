@@ -5,19 +5,29 @@
 
 <h1>Search result</h1>
         <h2>List of Pets</h2>
+        <form action=" {{ action('AnimalController@searchAnimal') }}" method="get">
+            <label for="">Pet's name</label>
+            <input type="text" name="name" >
+        </form>
+
         <ul>
                 @foreach ($animals as $animal)
-                    <li>
-                        {{$animal->name}}
-                    </li>
-                    <li>
-                        {{ $animal->image_id }}
-                    </li>
+                         <li>Name: 
+                            {{$animal->name}}
+                        </li>
+                        <li> Species:
+                            {{ $animal->species }}
+                        </li>
+                        <li> Breed:
+                            {{ $animal->breed }}
+                        </li>
+                
+                        <a href="animals/detail/{{ $animal->id}}">Detail</a>
                 @endforeach
         </ul>
-        <form action="" method="GET">
-            <button type="submit">Detail</button>
-        </form>
+
+
+
 
 
 @endsection

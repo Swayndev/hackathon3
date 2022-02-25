@@ -17,7 +17,7 @@ class OwnerController extends Controller
             ->limit('25')
             ->get();
 
-        return view('pages.index', compact('owners'));
+        return view('index.index', compact('owners'));
         //     
     }
 

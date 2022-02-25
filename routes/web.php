@@ -19,16 +19,30 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index/index');
-});
+});    // HOME PAGE
 
-Route::get('/owners', 'OwnerController@index');
+// SEARCH PAGES
+Route::get('/owners', 'Controller@listOwner'); // post method
 
-Route::get('/animals', 'AnimalController@index');
+Route::get('/animals', 'Controller@listAnimal');
+
+Route::get('/animals/search', 'AnimalController@searchAnimal');
 
 
-Route::post('/owners/create', 'OwnerController@index');
 
-Route::post('/animals/create', 'AnimalController@index');
+// DETAILS PAGES
+Route::get('/owners/detail', 'Controller@detailOwner');
+
+Route::get('/animals/detail/{id}', 'Controller@detailAnimal');
+
+
+
+
+
+
+// Route::post('/owners/create', 'OwnerController@index');
+
+// Route::post('/animals/create', 'AnimalController@index');
 
 
 // Route::get('/movies/create', 'MovieController@create');   // Route for create method
@@ -36,8 +50,3 @@ Route::post('/animals/create', 'AnimalController@index');
 // Route::get('/movies/{id?}', 'MovieController@show');     // Route for  show method
 
 // Route::post('/movies/store', 'MovieController@store');   // Route for store method
-
-// Route::delete(
-//     '/movies/{id}',
-//     'MovieController@delete'
-// );

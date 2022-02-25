@@ -5,6 +5,12 @@
 
 <h1>Search result</h1>
         <h2>List of Owners</h2>
+
+        <form action=" {{ action('OwnerController@search') }}" method="post">
+                <label for="">Owner's name</label>
+                <input type="text" name="name" >
+        </form>
+
         <ul>
                 @foreach ($owners as $owner)
                     <li>

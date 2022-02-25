@@ -9,12 +9,20 @@ use App\Models\Animal;
 class AnimalController extends Controller
 {
 
-    public function index()
+    public function searchAnimal(Request $request)
     {
-        $animals = Animal::orderBy('name', 'asc')
-            ->limit('25')
+        $animals = Animal::where('name', 'LIKE', '%' . $request->name . '%')
             ->get();
 
-        return view('index.index', compact('animals'));
+        return view('index.searchAnimal', compact('animals'));
     }
+
+    
+    // {
+    //     $animals = Animal::orderBy('name', 'asc')
+    //         ->limit('25')
+    //         ->get();
+
+    //     return view('index.index', compact('animals'));
+    // }
 }

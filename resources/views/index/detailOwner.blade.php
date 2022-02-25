@@ -4,7 +4,7 @@
 @section ('content')
 
 
-{{-- enter code --}}
-
+    <h1><strong> {{ $owner->surname }}, {{ $owner->first_name }} </strong></h1>
+ 
 
 @endsection

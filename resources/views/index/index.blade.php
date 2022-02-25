@@ -6,24 +6,34 @@
 
 <h2>The best vetclinic in the area we love taking care of your animals</h2>
 
-<form action="{{ action() }}" method="get">
+<h3>... Especially dolphins and hamsters</h3>
+{{-- <form action="" method="get">
     <label for="owners">
-        Search an owner:
+        Search an owner
     </label>
     <input type="submit" name="owners" value="search">
-</form>
+</form> --}}
 
+<a href="/owners">Search an owner</a>
 
-<form action="" method="get">
+<br><br>
+
+<a href="/animals">Search a pet (cuttie pie) </a>
+
+<br><br>
+
+{{-- <form action="" method="get">
     <label for="animals">
          Search a pet:
     </label>
     <input type="submit" name="animals" value="search">
-</form>
+</form> --}}
 
+
+
+<h4>We sometimes organize kinky party as well, stay tuned ;)</h4>
 
 @endsection
-
 
 
 
